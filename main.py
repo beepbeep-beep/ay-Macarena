@@ -101,55 +101,7 @@ def get_ddg_results(query):
 @app.route("/")
 def home():
     return render_template_string("""
-    <html>
-    <head>
-        <title>SamSearch</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #121212;
-                color: white;
-                text-align: center;
-                padding-top: 10%;
-            }
-            .search-box {
-                width: 90%;
-                max-width: 600px;
-                padding: 16px;
-                font-size: 18px;
-                border-radius: 24px;
-                border: none;
-                outline: none;
-                background-color: #333;
-                color: white;
-            }
-            .search-button {
-                margin-top: 16px;
-                padding: 10px 24px;
-                font-size: 16px;
-                border-radius: 24px;
-                border: none;
-                background-color: #1a73e8;
-                color: white;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>SamSearch</h1>
-        <form action="/sumdog-cloak" method="get">
-            <input class="search-box" type="text" name="q" placeholder="Search with DuckDuckGo...">
-            <br>
-            <button class="search-button" type="submit">Search (Safari)</button>
-        </form>
-        <form action="/showbie-cloak" method="get">
-            <input class="search-box" type="text" name="q" placeholder="Search with DuckDuckGo...">
-            <br>
-            <button class="search-button" type="submit">Search (Chrome)</button>
-        </form>
-    </body>
-    </html>
-    """)
+ 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000)
